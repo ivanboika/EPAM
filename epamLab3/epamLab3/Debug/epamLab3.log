@@ -1,0 +1,2 @@
+﻿real.obj : error LNK2005: "public: __thiscall Vector::~Vector(void)" (??1Vector@@QAE@XZ) already defined in Source.obj
+C:\Users\deadm\source\repos\epam\epamLab3\Debug\epamLab3.exe : fatal error LNK1169: one or more multiply defined symbols found
