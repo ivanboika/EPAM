@@ -11,7 +11,7 @@ private:
 	int fsize;
 	int ssize;
 public:
-	Array(int fsize = 1, int ssize = 1, type value = 0); /*: fsize(fsize), ssize(ssize), value(value)*/
+	Array(int fsize = 1, int ssize = 1, type value = 0); 
 	Array(Array&);
 	~Array();
 	void ShowArray();
@@ -29,8 +29,7 @@ public:
 				}
 				else {
 					continue;
-				}
-					
+				}	
 			}
 			if (isstringpos == true) {
 				for (int j{ 0 }; j < obj.ssize; j++) {
@@ -42,4 +41,3 @@ public:
 		std::cout  << std::endl << result<<std::endl;
 	}
 };
-
