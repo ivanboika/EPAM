@@ -1,0 +1,5 @@
+﻿  Array.cpp
+  Source.cpp
+C:\Users\deadm\source\repos\epam\epamLab4\epamLab4\Source.cpp(4,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  epamLab4.vcxproj -> C:\Users\deadm\source\repos\epam\epamLab4\Debug\epamLab4.exe
