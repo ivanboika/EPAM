@@ -1,0 +1,31 @@
+﻿  main.cpp
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(2,34): error C2084: function 'const int Passenger::GetAmount(void)' already has a body
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(2): message : see previous definition of 'GetAmount'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(5,33): error C2084: function 'const int Passenger::GetPrise(void)' already has a body
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(5): message : see previous definition of 'GetPrise'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(8,6): error C2084: function 'void AverageAmount(std::vector<Passenger,std::allocator<Passenger>> &)' already has a body
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(8): message : see previous definition of 'AverageAmount'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Plane.cpp(7,6): error C2248: 'Passenger::prise': cannot access private member declared in class 'Passenger'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(6): message : see declaration of 'Passenger::prise'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(3): message : see declaration of 'Passenger'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Plane.cpp(10,6): error C2248: 'Passenger::prise': cannot access private member declared in class 'Passenger'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(6): message : see declaration of 'Passenger::prise'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(3): message : see declaration of 'Passenger'
+  Plane.cpp
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(2,34): error C2084: function 'const int Passenger::GetAmount(void)' already has a body
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(2): message : see previous definition of 'GetAmount'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(5,33): error C2084: function 'const int Passenger::GetPrise(void)' already has a body
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(5): message : see previous definition of 'GetPrise'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(8,6): error C2084: function 'void AverageAmount(std::vector<Passenger,std::allocator<Passenger>> &)' already has a body
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(8): message : see previous definition of 'AverageAmount'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Plane.cpp(7,6): error C2248: 'Passenger::prise': cannot access private member declared in class 'Passenger'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(6): message : see declaration of 'Passenger::prise'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(3): message : see declaration of 'Passenger'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Plane.cpp(10,6): error C2248: 'Passenger::prise': cannot access private member declared in class 'Passenger'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(6): message : see declaration of 'Passenger::prise'
+C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.h(3): message : see declaration of 'Passenger'
+  Generating Code...
