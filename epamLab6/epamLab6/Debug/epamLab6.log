@@ -1,0 +1,10 @@
+﻿  lambda.cpp
+C:\Users\deadm\source\repos\epam\epamLab6\epamLab6\lambda.cpp(37,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab6\epamLab6\lambda.cpp(53,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab6\epamLab6\lambda.cpp(56,24): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+C:\Users\deadm\source\repos\epam\epamLab6\epamLab6\lambda.cpp(37,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab6\epamLab6\lambda.cpp(53,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab6\epamLab6\lambda.cpp(56,24): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  epamLab6.vcxproj -> C:\Users\deadm\source\repos\epam\epamLab6\Debug\epamLab6.exe
