@@ -1,7 +1,0 @@
-﻿  Bus.cpp
-  Car.cpp
-  Passenger.cpp
-  Train.cpp
-  Generating Code...
-C:\Users\deadm\source\repos\epam\epamLab5\epamLab5\Passenger.cpp(3): warning C4172: returning address of local variable or temporary
-  epamLab5.vcxproj -> C:\Users\deadm\source\repos\epam\epamLab5\Debug\epamLab5.exe
