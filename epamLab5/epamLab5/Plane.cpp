@@ -1,7 +1,6 @@
 #include "Plane.h"
-#include"Passenger.cpp"
 void Plane::Show() {
-	std::cout << "\nAn average amount of passengers of "<<this->type <<" is "<< this->total_amount;
+	std::cout << "\nAn total amount of passengers of "<<this->type <<" is "<< this->total_amount;
 	std::cout << "\nPrise is " << this->prise;
 }
 void Plane::SetAmount(int amount) {
@@ -15,5 +14,5 @@ void Plane::AverageAmount() {
 	static int counter{ 0 };
 	amount += this->GetAmount();
 	counter++;
-	std::cout << "Average amount is " << amount / counter;
+	std::cout << "\nAverage amount is " << amount / counter;
 }

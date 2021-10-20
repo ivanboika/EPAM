@@ -1,5 +1,5 @@
 #pragma once
-#include "Passenger.cpp"
+#include "Passenger.h"
 class Plane : public Passenger {
 private:
 	std::string type;

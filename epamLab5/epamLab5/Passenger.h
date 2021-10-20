@@ -7,10 +7,10 @@ protected:
 public:
 	Passenger(int amount, int prise) : total_amount(amount), prise(prise) {}
 	inline virtual void Transporter::Show() = 0;
-	virtual void SetAmount(int) = 0;
-	virtual void SetPrise(int) = 0;
-	virtual void AverageAmount() = 0;
-	 const int& GetAmount();
-	 const int& GetPrise();
+	inline virtual void SetAmount(int) = 0;
+	inline virtual void SetPrise(int) = 0;
+	inline virtual void AverageAmount() = 0;
+	int GetAmount();
+	inline int GetPrise();
 };
 

@@ -14,5 +14,5 @@ void Bus::AverageAmount() {
 	static int counter{ 0 };
 	amount += this->GetAmount();
 	counter++;
-	std::cout << "Average amount is " << amount / counter;
+	std::cout << "Average amount of passengers is " << amount / counter;
 }

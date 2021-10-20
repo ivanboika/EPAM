@@ -4,9 +4,10 @@ class Car : public Goods {
 private:
 	std::string type;
 public:
-	Car(int prise = 0, int weight = 0, std::string type = "Car") :type(type) {}
-	 void Show() override;
-	 void SetWeight(int) override;
-	 void TotalPrise(int) override;
+	Car(int prise , int weight ) : Goods(prise, weight) {}
+	 inline void Show() override;
+	 inline void SetWeight(int) override;
+	 inline void TotalPrise() override;
+	 friend inline void Show(std::vector<Car>&);
 };
 

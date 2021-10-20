@@ -1,7 +1,7 @@
 #include "Passenger.h"
-const int& Passenger::GetAmount() {
+ int Passenger::GetAmount() {
 	return this->total_amount;
 }
-const int& Passenger::GetPrise() {
+int Passenger::GetPrise() {
 	return this->prise;
 }
