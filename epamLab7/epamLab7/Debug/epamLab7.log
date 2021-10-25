@@ -1,6 +1,2 @@
-﻿  Person.cpp
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(39,2): error C2561: 'Person::GetValidString': function must return a value
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(35): message : see declaration of 'Person::GetValidString'
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(36,106): warning C4390: ';': empty controlled statement found; is this the intent?
-  main.cpp
-  Generating Code...
+﻿  main.cpp
+  epamLab7.vcxproj -> C:\Users\deadm\source\repos\epam\epamLab7\Debug\epamLab7.exe
