@@ -1,2 +1,2 @@
-﻿  main.cpp
-  epamLab7.vcxproj -> C:\Users\deadm\source\repos\epam\epamLab7\Debug\epamLab7.exe
+﻿  Person.cpp
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(73,21): warning C4018: '<': signed/unsigned mismatch
