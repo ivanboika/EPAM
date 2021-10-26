@@ -1,2 +1,8 @@
 ﻿  Person.cpp
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(73,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(41,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(47,43): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(74,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(194,22): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
+  epamLab7.vcxproj -> C:\Users\deadm\source\repos\epam\epamLab7\Debug\epamLab7.exe
