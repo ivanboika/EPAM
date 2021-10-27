@@ -16,24 +16,6 @@ Person::Person(std::string name, std::string surname, std::string patronymic) {
 	this->month_of_birth = 1;
 	this->year_of_birth = 1970;
 }
-std::string Person::GetValidString() { 
-	char temporary{ 'y' }; 
-	std::string intermediate;
-	int i{ 0 };
-	while (temporary != 9) {
-		temporary =_getche();
-		if ((temporary > 64 && temporary < 123) || temporary == 9) { //user can use only words and tab for exit
-			intermediate.push_back(temporary);
-		}
-		else {
-			std::cout << "\nEnter only alphabet symbols or use tab for exit" << std::endl;
-			std::cout << intermediate;
-		}
-		i++;
-	}
-	intermediate.pop_back();
-	return intermediate;
-}
 void Person::GetValidDate(STD string& obj) {
 	int counter{ 0 };
 	unsigned SWT{ 0 };
@@ -48,6 +30,7 @@ void Person::GetValidDate(STD string& obj) {
 					intermediate.push_back(obj[counter]);
 					counter++;
 				}
+				//day->month->year
 				switch (SWT){
 				case 0: {
 					this->day_of_birth = (stoi(intermediate));
@@ -73,79 +56,21 @@ void Person::GetValidDate(STD string& obj) {
 void Person::GetValidString(std::string &obj) { // is_alpha check
 	for (int i{ 0 }; i < obj.size(); i++) {
 		if (isalpha(obj[i])) {}
-		else
+		else {
 			obj.erase(i);
+			i--;
+		}
 	}
 }
-void Person::Show() {
+void Person::Show()const  {
 	STD cout << "\nThe name is " << this->name << " " << this->surname << " " << this->patronymic << STD endl;
 	STD cout << "Gender is " << this->gender << ". Date of birth is " << this->day_of_birth << "." << this->month_of_birth << "." << this->year_of_birth << STD endl;
-}
-void Person::GetValidDate() {
-	char temporary{ 'y' };
-	std::string intermediate;
-	int counter{ 0 };
-	while (temporary != 9 ) { // try to use std::cin.clear() to make /n useful as end of string (getline string)
-		temporary = _getche();
-		if ((temporary > 47 && temporary < 58) || temporary == 9 || temporary==46) { // user can use only nums and '.' and tab for exit
-			if (temporary == 46 || temporary==9) { // counter for date fields
-				switch (counter){
-				case 0: {
-					this->day_of_birth = stoi(intermediate);
-					break;
-				}
-				case 1: {
-					this->month_of_birth = stoi(intermediate);
-					break;
-				}
-				case 2: {
-					this->year_of_birth = stoi(intermediate);
-				}
-				default:
-					break;
-				} 
-				intermediate.clear();
-				counter++;
-			}
-			else
-			intermediate.push_back(temporary);
-		}
-		else {
-			std::cout << "\nEnter only numbers and point or use tab for exit. Write date again" << std::endl;
-			intermediate.clear();
-		}
-	}
-}
-void Person::SetData() {
-	std::cout << "\nEnter your name (tap Tab for exit): ";
-	this->name = GetValidString();
-	std::cout << "\nEnter your surname (tap Tab for exit): ";
-	this->surname = GetValidString();
-	std::cout << "\nEnter your patronymic (tap Tab for exit): ";
-	this->patronymic = GetValidString();
-	std::cout << "\nEnter your gender (tap Tab for exit): ";
-	this->gender = GetValidString();
-	std::cout << "\nEnter your date of birth (DD.MM.YYYY) (tap Tab for exit): ";
-	GetValidDate();
-}
-void InTo(std::ofstream& in,std::vector<Person>&obj) {
-	unsigned counter{ 0 };
-	unsigned size = obj.size();
-	while (counter < size) {
-		in << "¹" << counter+1 << STD endl;
-		in << obj[counter].name << STD endl;
-		in << obj[counter].surname << STD endl;
-		in << obj[counter].patronymic << STD endl;
-		in << obj[counter].gender << STD endl;
-		in << obj[counter].day_of_birth << "." << obj[counter].month_of_birth << "." << obj[counter].year_of_birth<<STD endl;
-		counter++;
-	}
 }
 void OutOf(std::ifstream& out, std::vector<Person>& obj) { // what if obj is empty?
 	unsigned counter{ 0 };
 	STD string intermediate;
 	while (!out.eof()) {
-		if (counter == obj.size()) {
+		if (counter == obj.size() ) {
 			obj.resize(counter + 1);
 		}
 		_GET
@@ -169,6 +94,7 @@ void OutOf(std::ifstream& out, std::vector<Person>& obj) { // what if obj is emp
 		counter++;
 		counter++;
 	}
+	obj.pop_back();
 }
 void Person::SetN(STD string&obj) {
 	this->name = obj;
@@ -183,13 +109,18 @@ void Person::SetG(STD string&obj) {
 	this->gender = obj;
 }
 void SortSurname(STD vector<Person>&obj) {
-	sort(obj.begin(), obj.end(), [](Person a, Person b) {return a.surname > b.surname; });
+	sort(obj.begin(), obj.end(), [](Person a, Person b) {return a.surname < b.surname; });
 }
 void Menu(int& choice,STD vector<Person>&obj) {
 	switch (choice) {
 	case 1: {
 		STD ifstream out("Test1.txt");
-		OutOf(out, obj);
+		if (out.is_open()) {
+			OutOf(out, obj);
+		}
+		else {
+			STD cout << "File isn't open";
+		}
 		break;
 	}
 	case 2: {
@@ -203,16 +134,97 @@ void Menu(int& choice,STD vector<Person>&obj) {
 		break;
 	}
 	case 4: {
-
+		int month{ 0 };
+		STD cout << "\nEnter your month: "; STD cin >> month;
+		assert(month > 0 && month < 13);
+		STD find_if(obj.begin(), obj.end(), [=]( Person a) {
+			if (a.month_of_birth == month) {
+				a.Show();
+				return false;
+			}
+			else
+				return false;
+			});
 	}
-	case 5: {
+	case 5: { //copy that and use sort
+		Person intermediate;
+		for (int i{ 0 }; i < obj.size(); i++) {
+			if (obj[i].year_of_birth < intermediate.year_of_birth) {
+				intermediate = obj[i];
+			}
+		}
+		intermediate.Show();
 		break;
 	}
 	case 6: {
+		char symbol{ 'k' };
+		STD cout << "\nEnter your month: "; symbol = _getche();
+		assert(isalpha(symbol));
+		STD find_if(obj.begin(), obj.end(), [=](Person a) {
+			if (a.surname[0] == symbol) {
+				a.Show();
+				return false;
+			}
+			else
+				return false;
+			});
 		break;
+	}
+	case 7: { //task in classroom
+		int dividend{ 0 }, divider{ 0 };
+		STD cout << "\nEnter dividend: "; 
+		/*try {*/
+			STD cin >> dividend;
+		/*	if (isalpha(dividend)) {
+				throw STD invalid_argument("\nNum should be num");
+			}
+		}
+		catch (STD invalid_argument& a) {
+			STD cout << a.what();
+			dividend = 1;
+		}*/
+		assert(!isalnum(dividend));
+		STD cout << "Enter divider: ";
+		/*try {*/
+			STD cin >> divider;
+			/*if (isalpha(divider)) {
+				throw STD invalid_argument("\nNum should be num\n");
+			}
+		}
+		catch (STD invalid_argument& a) {
+			STD cout << a.what();
+			divider = 1;
+		}*/
+		assert(!isalnum(divider));
+		/*Func(dividend, divider);*/
+		Fraction a(dividend, divider);
 	}
 	case EXIT: {
 		break;
 	}
+	default: {
+		break;
 	}
+	}
+}
+double Func(int a, int b) {
+	return a / b;
+}
+Fraction::Fraction(int a, int b) {
+	try {
+		if (b == 0)
+			throw STD runtime_error("\nYou can't divide on a zero");
+	}
+	catch (STD runtime_error& a) {
+		STD cout << a.what();
+	}
+}
+Person& Person::operator=(const Person&obj) {
+	this->day_of_birth = obj.day_of_birth;
+	this->month_of_birth = obj.month_of_birth;
+	this->year_of_birth = obj.year_of_birth;
+	this->name = obj.name;
+	this->surname = obj.surname;
+	this->patronymic = obj.patronymic;
+	return *this;
 }
