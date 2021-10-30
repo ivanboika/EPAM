@@ -8,6 +8,7 @@
 #include <chrono>
 #include <cassert>
 #include <exception>
+#include <list>
 using namespace std::chrono;
 #define STD std:: // just coz it's easier to use instead of std::
 #define _GET STD getline(out, intermediate); // easier to use
@@ -27,13 +28,9 @@ public:
 	Person();
 	Person(std::string , std::string , std::string);
 	Person(std::string name, std::string surname, std::string patronymic, int day, int month, int year, std::string gender) : name(name),surname(surname),gender(gender), day_of_birth(day),month_of_birth(month),year_of_birth(year) {};
-	friend void InTo(std::ofstream&, std::vector<Person>&);
 	friend void OutOf(std::ifstream&, std::vector<Person>&);
-	void SetData();
-	std::string GetValidString(); // used to get string from user
 	void GetValidString(std::string& obj); // used to get string from file
 	void GetValidDate(STD string&); // used to get string from file 
-	void GetValidDate(); // used to get date from user
 	void Show()const;
 	void SetN(STD string&); // set name
 	void SetS(STD string&); // set surname
@@ -42,12 +39,11 @@ public:
 	friend void SortSurname(STD vector<Person>&);
 	Person& operator=(const Person&);
 };
-class Fraction {
-private:
-	int dividend;
-	int divider;
+class Pred {
 public:
-	Fraction(int, int);
+	bool operator()(int num) {
+		return num % 2 == 0 && num != 0;
+	}
 };
-void Menu(int&,STD vector<Person>&);
-double Func(int, int);
+void Menu(int&, STD vector<Person>&);
+void CtoK(double&);

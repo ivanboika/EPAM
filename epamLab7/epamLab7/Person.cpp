@@ -74,7 +74,7 @@ void OutOf(std::ifstream& out, std::vector<Person>& obj) { // what if obj is emp
 			obj.resize(counter + 1);
 		}
 		_GET
-			if (intermediate[0] == '¹') { // pos string
+			if (intermediate[0] == '¹') { // position string
 				_GET
 					obj[counter].GetValidString(intermediate);
 				obj[counter].SetN(intermediate);
@@ -170,34 +170,44 @@ void Menu(int& choice,STD vector<Person>&obj) {
 			});
 		break;
 	}
-	case 7: { //task in classroom
-		int dividend{ 0 }, divider{ 0 };
-		STD cout << "\nEnter dividend: "; 
-		/*try {*/
-			STD cin >> dividend;
-		/*	if (isalpha(dividend)) {
-				throw STD invalid_argument("\nNum should be num");
-			}
+	
+	case 8: { // first task
+		STD vector<int >nums = { 5,3,9,10,20,32,44,7,0 };
+		STD cout << STD count_if(nums.begin(), nums.end(), Pred()) << STD endl;
+		break;
+	} 
+	case 9: { // second task
+		STD vector<double>cs = { 30,40,50,60,70,80,95 };
+		STD for_each(cs.begin(), cs.end(), CtoK);
+		STD for_each(cs.begin(), cs.end(), [](double a) {STD cout << a << " "; });
+		STD vector<double>cs1 = { 30,40,50,60,70,80,95,54 };
+		STD cout << STD endl;
+		STD for_each(cs1.begin(), cs1.end(), [](double& a) {a = a * 1.8 - 32;  });
+		STD for_each(cs1.begin(), cs1.end(), [](double a) {STD cout << a << " "; });
+		break;
+	}
+	case 10: { // third task
+		STD vector<int>my = { 1,2,4,5,6,7,8,22,5,6,35345,453,5,511,9,10 };
+		STD cout << STD endl;
+		STD cout << my.end() - my.begin();
+		STD cout << STD endl;
+		STD vector<int>::iterator iter = my.begin();
+		for (; iter != my.end(); ++iter) {
+			STD cout << *iter << " ";
 		}
-		catch (STD invalid_argument& a) {
-			STD cout << a.what();
-			dividend = 1;
-		}*/
-		assert(!isalnum(dividend));
-		STD cout << "Enter divider: ";
-		/*try {*/
-			STD cin >> divider;
-			/*if (isalpha(divider)) {
-				throw STD invalid_argument("\nNum should be num\n");
-			}
+		STD cout << STD endl;
+		iter = my.begin();
+		for (int i{ 0 }; i < my.size(); i++) {
+			STD cout << iter[i] << " ";
 		}
-		catch (STD invalid_argument& a) {
-			STD cout << a.what();
-			divider = 1;
-		}*/
-		assert(!isalnum(divider));
-		/*Func(dividend, divider);*/
-		Fraction a(dividend, divider);
+		iter = my.begin();
+		STD cout << STD endl;
+		while (iter < my.end()) {
+			STD cout << *iter << " ";
+			iter += 2;
+		}
+		STD cout << STD endl;
+		break;
 	}
 	case EXIT: {
 		break;
@@ -207,17 +217,8 @@ void Menu(int& choice,STD vector<Person>&obj) {
 	}
 	}
 }
-double Func(int a, int b) {
-	return a / b;
-}
-Fraction::Fraction(int a, int b) {
-	try {
-		if (b == 0)
-			throw STD runtime_error("\nYou can't divide on a zero");
-	}
-	catch (STD runtime_error& a) {
-		STD cout << a.what();
-	}
+void CtoK(double& obj) {
+	obj = obj * 1.8 - 32;
 }
 Person& Person::operator=(const Person&obj) {
 	this->day_of_birth = obj.day_of_birth;
