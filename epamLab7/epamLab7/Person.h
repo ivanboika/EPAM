@@ -8,7 +8,6 @@
 #include <chrono>
 #include <cassert>
 #include <exception>
-#include <list>
 using namespace std::chrono;
 #define STD std:: // just coz it's easier to use instead of std::
 #define _GET STD getline(out, intermediate); // easier to use
@@ -36,6 +35,7 @@ public:
 	void SetS(STD string&); // set surname
 	void SetP(STD string&); // set patro
 	void SetG(STD string&); // set gender
+	STD string GetGender();
 	friend void SortSurname(STD vector<Person>&);
 	Person& operator=(const Person&);
 };

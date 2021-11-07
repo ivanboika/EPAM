@@ -57,7 +57,7 @@ void Person::GetValidString(std::string &obj) { // is_alpha check
 	for (int i{ 0 }; i < obj.size(); i++) {
 		if (isalpha(obj[i])) {}
 		else {
-			obj.erase(i);
+			obj.erase(i, 1);
 			i--;
 		}
 	}
@@ -94,7 +94,6 @@ void OutOf(std::ifstream& out, std::vector<Person>& obj) { // what if obj is emp
 		counter++;
 		counter++;
 	}
-	obj.pop_back();
 }
 void Person::SetN(STD string&obj) {
 	this->name = obj;
@@ -111,18 +110,8 @@ void Person::SetG(STD string&obj) {
 void SortSurname(STD vector<Person>&obj) {
 	sort(obj.begin(), obj.end(), [](Person a, Person b) {return a.surname < b.surname; });
 }
-void Menu(int& choice,STD vector<Person>&obj) {
+void Menu(int& choice,STD vector<Person>&obj) {	
 	switch (choice) {
-	case 1: {
-		STD ifstream out("Test1.txt");
-		if (out.is_open()) {
-			OutOf(out, obj);
-		}
-		else {
-			STD cout << "File isn't open";
-		}
-		break;
-	}
 	case 2: {
 		for (int i{ 0 }; i < obj.size(); i++) {
 			obj[i].Show();
@@ -145,11 +134,12 @@ void Menu(int& choice,STD vector<Person>&obj) {
 			else
 				return false;
 			});
+		break;
 	}
 	case 5: { //copy that and use sort
 		Person intermediate;
 		for (int i{ 0 }; i < obj.size(); i++) {
-			if (obj[i].year_of_birth < intermediate.year_of_birth) {
+			if (obj[i].year_of_birth < intermediate.year_of_birth && obj[i].GetGender() == "male") {
 				intermediate = obj[i];
 			}
 		}
@@ -161,7 +151,7 @@ void Menu(int& choice,STD vector<Person>&obj) {
 		STD cout << "\nEnter your month: "; symbol = _getche();
 		assert(isalpha(symbol));
 		STD find_if(obj.begin(), obj.end(), [=](Person a) {
-			if (a.surname[0] == symbol) {
+			if (a.surname[0] == symbol ) {
 				a.Show();
 				return false;
 			}
@@ -217,6 +207,9 @@ void Menu(int& choice,STD vector<Person>&obj) {
 	}
 	}
 }
+STD string Person::GetGender() {
+	return this->gender;
+}
 void CtoK(double& obj) {
 	obj = obj * 1.8 - 32;
 }
@@ -227,5 +220,6 @@ Person& Person::operator=(const Person&obj) {
 	this->name = obj.name;
 	this->surname = obj.surname;
 	this->patronymic = obj.patronymic;
+	this->gender = obj.gender;
 	return *this;
 }

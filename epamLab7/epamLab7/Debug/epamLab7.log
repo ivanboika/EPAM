@@ -2,10 +2,11 @@
 C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(23,16): warning C4018: '<': signed/unsigned mismatch
 C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(29,43): warning C4018: '<': signed/unsigned mismatch
 C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(57,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(127,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(140,7): warning C4834: discarding return value of function with 'nodiscard' attribute
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(151,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(163,7): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(116,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(129,7): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(141,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(153,7): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\deadm\source\repos\epam\epamLab7\epamLab7\Person.cpp(190,22): warning C4018: '<': signed/unsigned mismatch
   main.cpp
   Generating Code...
   epamLab7.vcxproj -> C:\Users\deadm\source\repos\epam\epamLab7\Debug\epamLab7.exe
