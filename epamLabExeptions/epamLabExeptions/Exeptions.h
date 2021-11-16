@@ -4,19 +4,28 @@
 #include<algorithm>
 #include<cassert>
 #include <exception>
+struct AviaTicket {
+	std::string end;
+	std::string date;
+	int id;
+	std::string name;
+};
 template <typename T>
 class Queue {
 private:
 	Queue<T>* left;
+	Queue<T>* right;
 	const int MAX_SIZE = 5;
 	T data;
 	int size;
 public:
-	Queue<T>* right;
-	//Queue<T>* iterator;
+	bool first_time;
+	void LeftNullptr();
+	Queue<T>* iterator;
 	inline Queue();
 	inline void Push(Queue<T>* (&obj),T&);
-	inline void Pop();
+	inline Queue<T>* Pop();
+	inline Queue<T>* Pop(int);
 	inline void Show() noexcept;
 	Queue<T>* Begin();
 	Queue<T>* End();
@@ -24,11 +33,9 @@ public:
 	bool Delete();
 	inline bool Empty();
 	inline ~Queue() noexcept;
-};
-class Fraction {
-private:
-	int dividend;
-	int divider;
-public:
-	inline Fraction(int, int&);
+	const T& Get();
+	inline int Find(std::string&, int&);
+	Queue<T>* Move(int& index);
+	int& Size();
+	inline Queue<T>* NewPop();
 };

@@ -1,2 +1,7 @@
 ﻿  Exeptions.cpp
+  main.cpp
+C:\Users\deadm\source\repos\epam\epamLabExeptions\epamLabExeptions\main.cpp(10,6): warning C4101: 'choice_type': unreferenced local variable
+  Generating Code...
+C:\Users\deadm\source\repos\epam\epamLabExeptions\epamLabExeptions\Exeptions.cpp(114): warning C4715: 'Queue<AviaTicket>::Pop': not all control paths return a value
+C:\Users\deadm\source\repos\epam\epamLabExeptions\epamLabExeptions\Exeptions.cpp(173): warning C4715: 'Queue<AviaTicket>::Pop': not all control paths return a value
   epamLabExeptions.vcxproj -> C:\Users\deadm\source\repos\epam\epamLabExeptions\Debug\epamLabExeptions.exe
