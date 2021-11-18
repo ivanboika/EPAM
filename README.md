@@ -1,2 +1,2 @@
 # EPAM
-code
+С++ tasks
