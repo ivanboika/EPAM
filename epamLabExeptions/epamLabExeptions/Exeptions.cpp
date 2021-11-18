@@ -235,6 +235,55 @@ Queue<T>* Queue<T>::End() {
 	else
 		return this;
 }
-template<typename T>
-Queue<T>::~Queue() {
+template<>
+Queue<AviaTicket>::~Queue() {
+}
+template<>
+void Queue<AviaTicket>::Set(AviaTicket& obj) { // visual wants it
+	if (this != nullptr) {
+		this->data.id = obj.id;
+		this->data.date = obj.date;
+		this->data.end = obj.end;
+		this->data.name = obj.name;
+		this->size++;
+		this->first_time = false;
+	}
+	else {
+		std::cout << "\nThis object is empty";
+	}
+}
+template<>
+void Queue<AviaTicket>::LeftNullptr() {
+	this->left = nullptr;
+}
+template<>
+void Queue<AviaTicket>::Push(Queue<AviaTicket>* (&ptr), AviaTicket& obj) {
+	static Queue<AviaTicket>* _left;
+	try {
+		if (ptr != nullptr) { //first time
+			_left = ptr;
+			ptr->Push(ptr->right, obj);
+		}
+		else if (ptr == nullptr) {
+			if ((this->size > MAX_SIZE)) {
+				throw std::out_of_range::exception("Out of range");
+			}
+			ptr = new Queue<AviaTicket>;
+			ptr->first_time = _left->first_time;
+			ptr->size = _left->size;
+			this->data.id = obj.id;
+			this->data.date = obj.date;
+			this->data.end = obj.end;
+			this->data.name = obj.name;
+			ptr->right = nullptr;
+			ptr->left = _left;
+		}
+	}
+	catch (std::exception& exc) {
+		this->size--;
+		std::cout << exc.what() << std::endl;
+	}
+	catch (...) {
+		std::cout << "\nError occurs!";
+	}
 }

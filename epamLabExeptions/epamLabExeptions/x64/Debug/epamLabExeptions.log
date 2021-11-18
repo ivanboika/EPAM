@@ -1,0 +1,3 @@
+﻿  main.cpp
+H:\empty\epamLabExeptions\epamLabExeptions\main.cpp(10,6): warning C4101: 'choice_type': unreferenced local variable
+  epamLabExeptions.vcxproj -> H:\empty\epamLabExeptions\x64\Debug\epamLabExeptions.exe

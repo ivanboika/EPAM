@@ -1,5 +1,5 @@
-#include"Exeptions.cpp"
-// fix method show by means of this->left of method Begin()
+#include"Exeptions.h"
+//
 // 
 //
 #define TYPE AviaTicket
@@ -9,7 +9,7 @@ int main() {
 	nums = new Queue<TYPE>;
 	int choice_type;
 	while (choice != 0) {
-		std::cout << "Choose: 1- Push objs,2- pop objs,3- check is empty,4-show,6 pop by means of position: ";
+		std::cout << "Choose: 1- Push objs,2- pop objs,3- check is empty,4-show,find by id and date,6 pop by means of position: ";
 		std::cin >> choice;
 		switch (choice) {
 		case 1: {
@@ -64,6 +64,17 @@ int main() {
 		}
 		case 4: {
 			nums->Show();
+			break;
+		}
+		case 5: {
+			std::string date;
+			std::cout<< "\nEnter the date: ";
+			std::cin.ignore(32767, '\n');
+			std::getline(std::cin, date);
+			std::cout << "\nEnter the id: ";
+			int id{ 0 };
+			std::cin >> id;
+			std::cout << nums->Find(date, id) << std::endl;
 			break;
 		}
 		case 6: {

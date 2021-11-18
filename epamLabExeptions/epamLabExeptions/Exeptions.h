@@ -20,7 +20,7 @@ private:
 	int size;
 public:
 	bool first_time;
-	void LeftNullptr();
+	inline void LeftNullptr();
 	Queue<T>* iterator;
 	inline Queue();
 	inline void Push(Queue<T>* (&obj),T&);
