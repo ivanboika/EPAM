@@ -99,7 +99,6 @@ Queue<T>* Queue<T>::Pop() {
 				}
 				temporary = this->right;
 				temporary->size--;
-				temporary->data = this->right->data;
 				temporary->left = nullptr;
 				this->Delete();
 				return temporary;
@@ -124,7 +123,7 @@ bool Queue<T>::Delete() {
 	}
 }
 template <>
-int Queue<AviaTicket>::Find(std::string& _date,int& _id) {
+int Queue<AviaTicket>::Find(std::string& _date,int& _id) { //returns only index, can use it with Queue::Move
 	static unsigned int count{ 0 };
 	if (!this->Empty()) {
 		if (this->data.date == _date && this->data.id == _id) {
@@ -158,16 +157,17 @@ Queue<AviaTicket>* Queue<AviaTicket>::Pop(int pos) {
 		Queue<AviaTicket>* temp{ nullptr };
 		if (this->left != nullptr) {
 			this->left->right = this->right;
-			temp = this->right;
+			temp = this->left;
 		}
 		else
 			this->left->right = nullptr;
-		if (this->right != nullptr) //don't need to reference from empty pos
+		if (this->right != nullptr) { //don't need to reference from empty pos
 			this->right->left = this->left;
-		/*else*/
-			/*this->right->left = nullptr;*/
+			temp = this->right;
+		}
 		delete this;
 		this->data.id = 0;
+		temp = temp->Begin();
 		return temp;
 	}
 }
@@ -212,7 +212,6 @@ void Queue<AviaTicket>::Show() noexcept{
 		std::cout << std::endl;
 	}
 	else {
-		this->left->Show();
 		std::cout << this->data.id << " " << this->data.name << " " << this->data.date << " " << this->data.end << std::endl;
 		this->right->Show();
 	}
@@ -223,7 +222,7 @@ Queue<T>* Queue<T>::Begin() {
 		this->left->Begin();
 	}
 	else
-		return this->right; 
+		return this;
 }
 template<typename T>
 const T& Queue<T>::Get() { return this->data; }
@@ -271,10 +270,10 @@ void Queue<AviaTicket>::Push(Queue<AviaTicket>* (&ptr), AviaTicket& obj) {
 			ptr = new Queue<AviaTicket>;
 			ptr->first_time = _left->first_time;
 			ptr->size = _left->size;
-			this->data.id = obj.id;
-			this->data.date = obj.date;
-			this->data.end = obj.end;
-			this->data.name = obj.name;
+			ptr->data.id = obj.id;
+			ptr->data.date = obj.date;
+			ptr->data.end = obj.end;
+			ptr->data.name = obj.name;
 			ptr->right = nullptr;
 			ptr->left = _left;
 		}

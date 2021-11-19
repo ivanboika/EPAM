@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\epamLabExeptions",
+    "\\epamLabExeptions\\epamLabExeptions"
   ],
-  "SelectedNode": "\\epamLabExeptions.sln",
+  "SelectedNode": "\\epamLabExeptions\\epamLabExeptions\\Exeptions.cpp",
   "PreviewInSolutionExplorer": false
 }

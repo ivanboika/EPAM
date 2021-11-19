@@ -9,7 +9,7 @@ int main() {
 	nums = new Queue<TYPE>;
 	int choice_type;
 	while (choice != 0) {
-		std::cout << "Choose: 1- Push objs,2- pop objs,3- check is empty,4-show,find by id and date,6 pop by means of position: ";
+		std::cout << "Choose: 1- Push objs,2- pop objs,3- check is empty,4-show, 5-find by id and date,6 pop by means of position: ";
 		std::cin >> choice;
 		switch (choice) {
 		case 1: {
