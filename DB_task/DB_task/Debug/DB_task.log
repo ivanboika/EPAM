@@ -1,0 +1,5 @@
+﻿  Customers.cpp
+H:\empty\DB_task\DB_task\Customers.cpp(8,22): warning C4018: '<': signed/unsigned mismatch
+H:\empty\DB_task\DB_task\Customers.cpp(12,24): warning C4101: 'excp': unreferenced local variable
+H:\empty\DB_task\DB_task\Customers.cpp(29,25): warning C4101: 'excp': unreferenced local variable
+  DB_task.vcxproj -> H:\empty\DB_task\Debug\DB_task.exe
