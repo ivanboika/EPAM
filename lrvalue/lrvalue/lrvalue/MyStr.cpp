@@ -6,29 +6,41 @@ MyStr::MyStr(const std::string& _str) {
 	std::cout << "\nconst strng & constructor happened";
 }
 MyStr::~MyStr() {
-	if (this->str_) {
+	if (this->str_ !=nullptr) {
 		delete this->str_;
 		this->str_ = nullptr;
 	}
 	std::cout << "\ndestructor happened";
 }
 MyStr::MyStr(MyStr& obj) {
-	this->str_ = obj.str_;
+	if (!this->str_)
+		this->str_ = new std::vector<char>;
+	*this->str_ = *obj.str_;
 	std::cout << "\ncopy constructor happened";
 }
 MyStr::MyStr(MyStr&& obj) noexcept {
-	std::swap((this->str_), (obj.str_));
-	obj.~MyStr();
+	if (!this->str_)
+		this->str_ = new std::vector<char>;
+	*this->str_= std::move(*obj.str_);
 	std::cout << "\nAssignment constructor: ";
+	delete obj.str_;
+	obj.str_ = nullptr;
 	std::cout << obj.str_ << std::endl;
 }
 MyStr &MyStr::operator=(MyStr&& obj) noexcept{
 	std::cout << "\nMove assignment happened ";
-	std::swap((this->str_), obj.str_); 
-	/*obj.~MyStr();*/
+	*(this->str_) = /*std::move*/std::move(*(obj.str_));
+	delete obj.str_;
+	obj.str_ = nullptr;
 	std::cout << std::endl << obj.str_ << std::endl;	
 	return *this;
 }
+//MyStr& MyStr::operator=(MyStr& obj) noexcept {
+//	std::cout << "\Copy assignment happened ";
+//	this->str_ = obj.str_;
+//	std::cout << std::endl << obj.str_ << std::endl;
+//	return *this;
+//}
 MyStr::MyStr() {
 	this->str_ = new std::vector<char>;
 	this->str_->resize(0);
@@ -45,25 +57,24 @@ TextView::TextView( TextView&& obj) noexcept{
 	if (!this->str_) {
 		this->str_ = new MyStr;
 	}
-	/*this->str_ = std::move(obj.str_);*/
-	std::swap(this->str_, obj.str_);
-	/*obj.~TextView();*/
+
 	std::cout << "\nConstructor of 2th class (with move) ";
-	std::cout << &obj << std::endl;
+	std::cout << obj.str_ << std::endl;
 }
 TextView::~TextView() {
-	this->str_->~MyStr();
-	delete this->str_;
-	this->str_ = nullptr;
+	if (this->str_) {
+		delete this->str_;
+		this->str_ = nullptr;
+	}
 	std::cout << "\n2th class destructor happened";
 }
 TextView::TextView(MyStr&& obj) noexcept{
 	if (!this->str_) {
 		this->str_ = new MyStr;
 	}
-	//*(this->str_) = std::move(obj);
-	std::swap(this->str_->Get(), obj.Get());
-	obj.~MyStr();
+	*(this->str_) = std::move(obj);
+	delete obj.Get();
+	obj.Get() = nullptr;
 	std::cout << "\n2th class move assignment happened: " << obj.Get();
 }
 void TextView::Show() {

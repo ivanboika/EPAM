@@ -14,7 +14,7 @@ public:
 	explicit MyStr(const std::string&);
 	~MyStr();
 	void Show() noexcept;
-	const MyStr& operator=(MyStr&);
+	//MyStr& operator=(MyStr&);
 	MyStr& operator=( MyStr&&) noexcept;
 	std::vector<char>*& Get();
 };
