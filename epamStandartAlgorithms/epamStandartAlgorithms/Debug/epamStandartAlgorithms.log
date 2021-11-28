@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\deadm\source\repos\epamStandartAlgorithms\epamStandartAlgorithms\main.cpp(12,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\deadm\source\repos\epamStandartAlgorithms\epamStandartAlgorithms\main.cpp(14,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epamStandartAlgorithms\epamStandartAlgorithms\main.cpp(38,7): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\deadm\source\repos\epamStandartAlgorithms\epamStandartAlgorithms\main.cpp(65,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\deadm\source\repos\epamStandartAlgorithms\epamStandartAlgorithms\main.cpp(83): warning C4715: 'find': not all control paths return a value
+  epamStandartAlgorithms.vcxproj -> C:\Users\deadm\source\repos\epamStandartAlgorithms\Debug\epamStandartAlgorithms.exe

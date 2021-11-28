@@ -2,9 +2,9 @@
 #include"libs.h"
 Buyer::Buyer() {
 	std::cout << "\nDefault constructor happened";
-	this->boughts = NULL;
+	this->boughts = 0;
 	this->email = "";
-	this->summ_boughts = NULL;
+	this->summ_boughts = 0;
 	this->name_ = "";
 }
 Buyer::Buyer(std::string&& name, std::string&& email, int boughts, double total_prise) {
@@ -16,8 +16,11 @@ Buyer::Buyer(std::string&& name, std::string&& email, int boughts, double total_
 }
 Buyer::Buyer(Buyer&&obj) noexcept{
 	*this = std::move(obj);
+	obj.boughts = 0;
+	obj.email = "";
+	obj.name_ = "";
+	obj.summ_boughts = 0; 
 	std::cout << "\nMove constructor happened: " << &obj;
-	obj.~Buyer();
 }
 Buyer& Buyer::operator=(Buyer&obj) {
 	this->name_ = obj.name_;
@@ -32,7 +35,10 @@ Buyer& Buyer::operator=(Buyer&&obj) noexcept{
 	std::swap(this->email, obj.email);
 	std::swap(this->boughts, obj.boughts);
 	std::swap(this->summ_boughts, obj.summ_boughts);
-	obj.~Buyer();
+	obj.boughts = NULL;
+	obj.email = "";
+	obj.name_ = "";
+	obj.summ_boughts = NULL;
 	std::cout << "\nMove logic. Memory of rvalue reference: " << &obj;
 	return *this;
 }
@@ -66,10 +72,10 @@ void Buyer::Generator() {
 	this->summ_boughts = (boughts * (1 + rand() % 50)) / (1 + rand() % 13);
 }
 Buyer::~Buyer() {
-	this->boughts = 0;
+	this->boughts = NULL;
 	this->email = "";
 	this->name_ = "";
-	this->summ_boughts = 0;
+	this->summ_boughts = NULL;
 	std::cout << "\ndestructor happened";
 }
 std::string Buyer::GetMail () const{

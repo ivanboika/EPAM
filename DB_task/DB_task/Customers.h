@@ -13,4 +13,3 @@ public:
 	Customers(int);
 	void Task();
 };
-
