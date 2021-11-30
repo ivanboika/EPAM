@@ -24,6 +24,15 @@
     <ClCompile Include="BLR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RUB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EUR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="USD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\DB_task\DB_task\libs.h">
@@ -33,6 +42,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BLR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RUB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EUR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="USD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

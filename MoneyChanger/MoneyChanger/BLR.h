@@ -1,12 +1,11 @@
 #pragma once
 #include "Currency.h"
-#include "H:\empty\DB_task\DB_task\libs.h"
 class BLR : public Currency {
 private:
-
+	const std::string type{ "BLR" };
+	const float ratio = 0.0058;
 public:
 	BLR();
 	BLR(float);
 	void Show() override;
 };
-

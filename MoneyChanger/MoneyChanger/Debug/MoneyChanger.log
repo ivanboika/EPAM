@@ -1,2 +1,7 @@
-﻿  Currency.cpp
+﻿  BLR.cpp
+H:\empty\MoneyChanger\MoneyChanger\Tenge.h(11,55): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  Currency.cpp
+  Tenge.cpp
+H:\empty\MoneyChanger\MoneyChanger\Tenge.h(11,55): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  Generating Code...
   MoneyChanger.vcxproj -> H:\empty\MoneyChanger\Debug\MoneyChanger.exe

@@ -141,12 +141,18 @@
   <ItemGroup>
     <ClCompile Include="BLR.cpp" />
     <ClCompile Include="Currency.cpp" />
+    <ClCompile Include="EUR.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RUB.cpp" />
+    <ClCompile Include="USD.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\DB_task\DB_task\libs.h" />
     <ClInclude Include="BLR.h" />
     <ClInclude Include="Currency.h" />
+    <ClInclude Include="EUR.h" />
+    <ClInclude Include="RUB.h" />
+    <ClInclude Include="USD.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
