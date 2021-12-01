@@ -2,10 +2,12 @@
 #include "Currency.h"
 class USD : public Currency {
 private:
-	const std::string type{ "USD" };
 	const float ratio = 0.0023;
+	const std::vector<std::string> type{ "$","usd","USD" };
 public:
+
 	USD();
 	USD(float);
+	void Show()override;
 };
 

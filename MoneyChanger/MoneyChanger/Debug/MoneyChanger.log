@@ -1,7 +1,21 @@
 ﻿  BLR.cpp
-H:\empty\MoneyChanger\MoneyChanger\Tenge.h(11,55): warning C4305: 'initializing': truncation from 'double' to 'const float'
+H:\empty\MoneyChanger\MoneyChanger\BLR.h(6,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
   Currency.cpp
-  Tenge.cpp
-H:\empty\MoneyChanger\MoneyChanger\Tenge.h(11,55): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  EUR.cpp
+H:\empty\MoneyChanger\MoneyChanger\EUR.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  RUB.cpp
+H:\empty\MoneyChanger\MoneyChanger\RUB.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  USD.cpp
+H:\empty\MoneyChanger\MoneyChanger\USD.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  UniqueCurr.cpp
+  main.cpp
+H:\empty\MoneyChanger\MoneyChanger\BLR.h(6,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+H:\empty\MoneyChanger\MoneyChanger\EUR.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+H:\empty\MoneyChanger\MoneyChanger\RUB.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+H:\empty\MoneyChanger\MoneyChanger\USD.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+H:\empty\MoneyChanger\MoneyChanger\funcs.h(26,21): warning C4018: '<': signed/unsigned mismatch
+H:\empty\MoneyChanger\MoneyChanger\main.cpp(88,25): warning C4018: '<': signed/unsigned mismatch
+H:\empty\MoneyChanger\MoneyChanger\main.cpp(61,12): warning C4101: 'amount': unreferenced local variable
   Generating Code...
+H:\empty\MoneyChanger\MoneyChanger\funcs.h(22): warning C4715: 'GetType': not all control paths return a value
   MoneyChanger.vcxproj -> H:\empty\MoneyChanger\Debug\MoneyChanger.exe
