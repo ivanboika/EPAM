@@ -144,7 +144,6 @@
     <ClCompile Include="EUR.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RUB.cpp" />
-    <ClCompile Include="UniqueCurr.cpp" />
     <ClCompile Include="USD.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,7 +153,7 @@
     <ClInclude Include="EUR.h" />
     <ClInclude Include="funcs.h" />
     <ClInclude Include="RUB.h" />
-    <ClInclude Include="UniqueCurr.h" />
+    <ClInclude Include="tempClass.h" />
     <ClInclude Include="USD.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

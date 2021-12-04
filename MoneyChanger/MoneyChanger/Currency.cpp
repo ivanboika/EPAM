@@ -10,5 +10,5 @@ C operator+(const C& obj) {
 }
 template <typename C>
 C operator-(const C& obj) {
-	return C(this->ratio * this->amount - obj.ratio * obj.amount);
+	return C(this->amount * this->ratio - obj.amount * obj.ratio);
 }

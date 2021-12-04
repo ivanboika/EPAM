@@ -5,22 +5,20 @@
 #include "EUR.h"
 #include "RUB.h"
 #include "USD.h"
-const std::vector<std::string> BLR_type{ "BLR","blr","BYR","byr" };
-const std::vector<std::string> EUR_type{ "EUR","eur","euro","EURO" };
-const std::vector<std::string> USD_type{ "$","usd","USD" };
-const std::vector<std::string> RUB_type{ "RUB","rub" };
-
-int GetType(std::string type){
-	if (std::find(BLR_type.begin(), BLR_type.end(), type) != BLR_type.end())
-		return 4;
-	if (std::find(RUB_type.begin(), RUB_type.end(), type) != RUB_type.end())
-		return 1;
-	if (std::find(USD_type.begin(), USD_type.end(), type) != USD_type.end()) 
-		return 2;
-	if (std::find(EUR_type.begin(), EUR_type.end(), type) != EUR_type.end())
-		return 3;
-}
-void GetAll(std::string from_user, std::vector<Currency*>& values, std::vector<char>& signs) {
+#include"tempClass.h"
+struct Types {
+	const std::vector<std::string> BLR_type{ "BLR","blr","BYR","byr" };
+	const std::vector<std::string> EUR_type{ "EUR","eur","euro","EURO" };
+	const std::vector<std::string> USD_type{ "$","usd","USD" };
+	const std::vector<std::string> RUB_type{ "RUB","rub" };
+};
+int GetType(std::string, Types* a=new Types);
+class Funcs abstract{
+public:
+	virtual void Show() = 0;
+	inline friend void GetAll(std::string from_user, std::vector<Currency*>& values, std::vector<char>& signs);
+};
+inline void GetAll(std::string from_user, std::vector<Currency*>& values, std::vector<char>& signs) {
 	std::string temp{ "" };
 	std::string type{ "" };
 	for (int i{ 0 }; i < from_user.size(); i++) { //read and translate what user typed 
@@ -89,36 +87,6 @@ void GetAll(std::string from_user, std::vector<Currency*>& values, std::vector<c
 						type.clear();
 						throw std::bad_typeid();
 					}
-					/*switch (GetType(type)) {
-					case 1: {
-						values.push_back(new RUB(std::stof(temp)));
-						temp.clear();
-						type.clear();
-						break;
-					}
-					case 2: {
-						values.push_back(new USD(std::stof(temp)));
-						temp.clear();
-						type.clear();
-						break;
-					}
-					case 3: {
-						values.push_back(new EUR(std::stof(temp)));
-						temp.clear();
-						type.clear();
-						break;
-					}
-					case 4: {
-						values.push_back(new BLR(std::stof(temp)));
-						temp.clear();
-						type.clear();
-						break;
-					}
-					default: {
-						temp.clear();
-						type.clear();
-						throw std::bad_typeid();
-						break;*/
 				}
 				else {
 					std::cout << "\nSomething went wrong";
@@ -126,5 +94,23 @@ void GetAll(std::string from_user, std::vector<Currency*>& values, std::vector<c
 				}
 			}
 		}
+	}
+}
+int GetType(std::string type, Types* a ) {
+	if (std::find(a->BLR_type.begin(), a->BLR_type.end(), type) != a->BLR_type.end()) {
+		delete a;
+		return 4;
+	}
+	if (std::find(a->RUB_type.begin(), a->RUB_type.end(), type) != a->RUB_type.end()) {
+		delete a;
+		return 1;
+	}
+	if (std::find(a->USD_type.begin(), a->USD_type.end(), type) != a->USD_type.end()) {
+		delete a;
+		return 2;
+	}
+	if (std::find(a->EUR_type.begin(), a->EUR_type.end(), type) != a->EUR_type.end()) {
+		delete a;
+		return 3;
 	}
 }

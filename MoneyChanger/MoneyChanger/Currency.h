@@ -8,14 +8,11 @@ enum CURR {
 };
 class Currency abstract {
 protected:
-	float amount;
+	const float ratio = 0;
 public:
-
+	float amount;
 	Currency();
 	Currency(float);
 	virtual void Show() = 0;
-	 template <typename C>
-	 C operator+(C&);
-	template <typename C>
-	 C operator-(const C&);
+	Currency& operator+(Currency* obj);
 };

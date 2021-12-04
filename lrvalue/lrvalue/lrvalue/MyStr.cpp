@@ -35,12 +35,12 @@ MyStr &MyStr::operator=(MyStr&& obj) noexcept{
 	std::cout << std::endl << obj.str_ << std::endl;	
 	return *this;
 }
-//MyStr& MyStr::operator=(MyStr& obj) noexcept {
-//	std::cout << "\Copy assignment happened ";
-//	this->str_ = obj.str_;
-//	std::cout << std::endl << obj.str_ << std::endl;
-//	return *this;
-//}
+MyStr& MyStr::operator=(MyStr& obj) noexcept {
+	std::cout << "\Copy assignment happened ";
+	*this->str_ = *obj.str_;
+	std::cout << std::endl << obj.str_ << std::endl;
+	return *this;
+}
 MyStr::MyStr() {
 	this->str_ = new std::vector<char>;
 	this->str_->resize(0);
@@ -57,7 +57,6 @@ TextView::TextView( TextView&& obj) noexcept{
 	if (!this->str_) {
 		this->str_ = new MyStr;
 	}
-
 	std::cout << "\nConstructor of 2th class (with move) ";
 	std::cout << obj.str_ << std::endl;
 }

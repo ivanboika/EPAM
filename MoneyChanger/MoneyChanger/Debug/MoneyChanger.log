@@ -1,21 +1,16 @@
-﻿  BLR.cpp
-H:\empty\MoneyChanger\MoneyChanger\BLR.h(6,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  Currency.cpp
-  EUR.cpp
-H:\empty\MoneyChanger\MoneyChanger\EUR.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  RUB.cpp
-H:\empty\MoneyChanger\MoneyChanger\RUB.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  USD.cpp
-H:\empty\MoneyChanger\MoneyChanger\USD.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  UniqueCurr.cpp
-  main.cpp
+﻿  main.cpp
 H:\empty\MoneyChanger\MoneyChanger\BLR.h(6,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
 H:\empty\MoneyChanger\MoneyChanger\EUR.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
 H:\empty\MoneyChanger\MoneyChanger\RUB.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
 H:\empty\MoneyChanger\MoneyChanger\USD.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-H:\empty\MoneyChanger\MoneyChanger\funcs.h(26,21): warning C4018: '<': signed/unsigned mismatch
-H:\empty\MoneyChanger\MoneyChanger\main.cpp(88,25): warning C4018: '<': signed/unsigned mismatch
-H:\empty\MoneyChanger\MoneyChanger\main.cpp(61,12): warning C4101: 'amount': unreferenced local variable
-  Generating Code...
-H:\empty\MoneyChanger\MoneyChanger\funcs.h(22): warning C4715: 'GetType': not all control paths return a value
+H:\empty\MoneyChanger\MoneyChanger\funcs.h(24,21): warning C4018: '<': signed/unsigned mismatch
+H:\empty\MoneyChanger\MoneyChanger\main.cpp(69,24): warning C4018: '<': signed/unsigned mismatch
+H:\empty\MoneyChanger\MoneyChanger\tempClass.h(43,22): warning C4018: '<': signed/unsigned mismatch
+H:\empty\MoneyChanger\MoneyChanger\tempClass.h(42): message : while compiling class template member function 'void TempClass<BLR>::CalcAll(std::vector<Currency *,std::allocator<Currency *>>,std::vector<char,std::allocator<char>> &)'
+H:\empty\MoneyChanger\MoneyChanger\main.cpp(53): message : see reference to function template instantiation 'void TempClass<BLR>::CalcAll(std::vector<Currency *,std::allocator<Currency *>>,std::vector<char,std::allocator<char>> &)' being compiled
+H:\empty\MoneyChanger\MoneyChanger\main.cpp(52): message : see reference to class template instantiation 'TempClass<BLR>' being compiled
+H:\empty\MoneyChanger\MoneyChanger\tempClass.h(8,56): warning C4305: 'initializing': truncation from 'double' to 'const float'
+H:\empty\MoneyChanger\MoneyChanger\tempClass.h(11): message : while compiling class template member function 'TempClass<BLR>::TempClass(float,int)'
+H:\empty\MoneyChanger\MoneyChanger\main.cpp(52): message : see reference to function template instantiation 'TempClass<BLR>::TempClass(float,int)' being compiled
+H:\empty\MoneyChanger\MoneyChanger\funcs.h(116): warning C4715: 'GetType': not all control paths return a value
   MoneyChanger.vcxproj -> H:\empty\MoneyChanger\Debug\MoneyChanger.exe

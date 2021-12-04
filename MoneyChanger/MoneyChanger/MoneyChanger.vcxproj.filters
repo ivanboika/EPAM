@@ -33,9 +33,6 @@
     <ClCompile Include="USD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UniqueCurr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\DB_task\DB_task\libs.h">
@@ -56,10 +53,10 @@
     <ClInclude Include="USD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UniqueCurr.h">
+    <ClInclude Include="funcs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="funcs.h">
+    <ClInclude Include="tempClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
