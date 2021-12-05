@@ -1,31 +1,31 @@
-#include "H:\empty\DB_task\DB_task\libs.h"
-#include "Currency.h"
+#include "D:\git\new_epam\DB_task\DB_task\libs.h"
 #include "BLR.h"
 #include "EUR.h"
 #include "RUB.h"
 #include "USD.h"
+#include "Currency.h"
 #include"funcs.h"
-#include"UniqueCurr.h"
 #include"tempClass.h"
 //i hate this code, that's terrible, i don't wanna be father of this, ofc there is much better variat of decision
 int main() {
 	int choice{ 0 };
 	std::vector<Currency*>values;
-	std::string temp{ "" };
+	std::string temp;
 	std::vector<char>signs{ '+' };
-	try {
-		do {
+	do {
+		try {
 			std::cout << "1-Enter amount of currency\n2-Enter the output type and calculate\n4-Clear the list\n5-Show\n";
-			std::cin >> choice;
+			choice = _getch();
 			switch (choice) {
-			case 1: {
+			case '1': {
 				std::cout << "\nEnter what u want to count(Ex: 35RUB+5USD+1EUR): ";
-				std::cin.ignore(32767, '\n');
+				std::cin.clear();
 				std::getline(std::cin, temp);
 				GetAll(temp, values, signs);
+				temp.clear();
 				break;
 			}
-			case 2: {
+			case'2': {
 				int type{ 0 };
 				std::cout << "\nEnter type(1-RUB,2-USD,3-EUR,4-BLR):  ";
 				std::cin >> type;
@@ -50,7 +50,7 @@ int main() {
 				}
 				case BLR_: {
 					TempClass<BLR> result(0, type);
-					result.CalcAll(values,signs);
+					result.CalcAll(values, signs);
 					result.Show();
 					break;
 				}
@@ -59,28 +59,33 @@ int main() {
 					break;
 				}
 				}
-			}
-			case 4: {
-				values.clear();
-				signs.clear();
+
 				break;
 			}
-			case 5: {
+			case '4': {
+				values.clear();
+				values.resize(0);
+				signs.resize(1);
+				break;
+			}
+			case '5': {
 				for (int i{ 0 }; i < values.size(); i++) {
 					values[i]->Show();
 				}
+				break;
+			}
+			case 'n': {
 				break;
 			}
 			default: {
 				std::cout << "\nYou missed";
 				break;
 			}
-			
 			}
-		} while (choice != 'n');
-	}
-	catch (std::exception& _exc) {
-		std::cout << "\n" << _exc.what();
-	}
+		}
+		catch (std::exception& _exc) {
+			std::cout << "\n" << _exc.what();
+		}
+	} while (choice != 'n');
 	return 0;
 }

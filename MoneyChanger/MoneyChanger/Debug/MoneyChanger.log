@@ -1,16 +1,26 @@
-﻿  main.cpp
-H:\empty\MoneyChanger\MoneyChanger\BLR.h(6,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-H:\empty\MoneyChanger\MoneyChanger\EUR.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-H:\empty\MoneyChanger\MoneyChanger\RUB.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-H:\empty\MoneyChanger\MoneyChanger\USD.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
-H:\empty\MoneyChanger\MoneyChanger\funcs.h(24,21): warning C4018: '<': signed/unsigned mismatch
-H:\empty\MoneyChanger\MoneyChanger\main.cpp(69,24): warning C4018: '<': signed/unsigned mismatch
-H:\empty\MoneyChanger\MoneyChanger\tempClass.h(43,22): warning C4018: '<': signed/unsigned mismatch
-H:\empty\MoneyChanger\MoneyChanger\tempClass.h(42): message : while compiling class template member function 'void TempClass<BLR>::CalcAll(std::vector<Currency *,std::allocator<Currency *>>,std::vector<char,std::allocator<char>> &)'
-H:\empty\MoneyChanger\MoneyChanger\main.cpp(53): message : see reference to function template instantiation 'void TempClass<BLR>::CalcAll(std::vector<Currency *,std::allocator<Currency *>>,std::vector<char,std::allocator<char>> &)' being compiled
-H:\empty\MoneyChanger\MoneyChanger\main.cpp(52): message : see reference to class template instantiation 'TempClass<BLR>' being compiled
-H:\empty\MoneyChanger\MoneyChanger\tempClass.h(8,56): warning C4305: 'initializing': truncation from 'double' to 'const float'
-H:\empty\MoneyChanger\MoneyChanger\tempClass.h(11): message : while compiling class template member function 'TempClass<BLR>::TempClass(float,int)'
-H:\empty\MoneyChanger\MoneyChanger\main.cpp(52): message : see reference to function template instantiation 'TempClass<BLR>::TempClass(float,int)' being compiled
-H:\empty\MoneyChanger\MoneyChanger\funcs.h(116): warning C4715: 'GetType': not all control paths return a value
-  MoneyChanger.vcxproj -> H:\empty\MoneyChanger\Debug\MoneyChanger.exe
+﻿  BLR.cpp
+D:\git\new_epam\MoneyChanger\MoneyChanger\BLR.h(6,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  Currency.cpp
+  EUR.cpp
+D:\git\new_epam\MoneyChanger\MoneyChanger\EUR.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  main.cpp
+D:\git\new_epam\MoneyChanger\MoneyChanger\BLR.h(6,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+D:\git\new_epam\MoneyChanger\MoneyChanger\EUR.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+D:\git\new_epam\MoneyChanger\MoneyChanger\RUB.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+D:\git\new_epam\MoneyChanger\MoneyChanger\USD.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+D:\git\new_epam\MoneyChanger\MoneyChanger\funcs.h(24,21): warning C4018: '<': signed/unsigned mismatch
+D:\git\new_epam\MoneyChanger\MoneyChanger\main.cpp(72,24): warning C4018: '<': signed/unsigned mismatch
+D:\git\new_epam\MoneyChanger\MoneyChanger\tempClass.h(18,2): warning C4018: '<': signed/unsigned mismatch
+D:\git\new_epam\MoneyChanger\MoneyChanger\tempClass.h(17): message : while compiling class template member function 'void TempClass<BLR>::CalcAll(std::vector<Currency *,std::allocator<Currency *>> &,std::vector<char,std::allocator<char>> &)'
+D:\git\new_epam\MoneyChanger\MoneyChanger\main.cpp(53): message : see reference to function template instantiation 'void TempClass<BLR>::CalcAll(std::vector<Currency *,std::allocator<Currency *>> &,std::vector<char,std::allocator<char>> &)' being compiled
+D:\git\new_epam\MoneyChanger\MoneyChanger\main.cpp(52): message : see reference to class template instantiation 'TempClass<BLR>' being compiled
+D:\git\new_epam\MoneyChanger\MoneyChanger\tempClass.h(8,1): warning C4305: 'initializing': truncation from 'double' to 'const float'
+D:\git\new_epam\MoneyChanger\MoneyChanger\tempClass.h(11): message : while compiling class template member function 'TempClass<BLR>::TempClass(float,int)'
+D:\git\new_epam\MoneyChanger\MoneyChanger\main.cpp(52): message : see reference to function template instantiation 'TempClass<BLR>::TempClass(float,int)' being compiled
+  RUB.cpp
+D:\git\new_epam\MoneyChanger\MoneyChanger\RUB.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  USD.cpp
+D:\git\new_epam\MoneyChanger\MoneyChanger\USD.h(5,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  Generating Code...
+D:\git\new_epam\MoneyChanger\MoneyChanger\funcs.h(116): warning C4715: 'GetType': not all control paths return a value
+  MoneyChanger.vcxproj -> D:\git\new_epam\MoneyChanger\Debug\MoneyChanger.exe

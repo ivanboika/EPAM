@@ -2,13 +2,5 @@
 Currency::Currency() {
 	this->amount = 0;
 }
-Currency::Currency(float amount) : amount(amount){
-}
-template <typename C>
-C operator+(const C& obj) {
-	return C(this->ratio*this->amount + obj.ratio*obj.amount);
-}
-template <typename C>
-C operator-(const C& obj) {
-	return C(this->amount * this->ratio - obj.amount * obj.ratio);
+Currency::Currency(float amount,float ratio) : amount(amount),ratio(ratio){
 }

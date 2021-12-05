@@ -1,5 +1,5 @@
 #pragma once
-#include "H:\empty\DB_task\DB_task\libs.h"
+#include "D:\git\new_epam\DB_task\DB_task\libs.h"
 #include "Currency.h"
 #include "BLR.h"
 #include "EUR.h"
@@ -29,7 +29,7 @@ inline void GetAll(std::string from_user, std::vector<Currency*>& values, std::v
 			if (from_user[i] >= 'A' && from_user[i] <= 'z') { // 
 				type.push_back(from_user[i]);
 				// if this is last word
-				if (i == from_user.size() - 1) {
+				if (i == from_user.size() - 1) { // 
 					int _type = GetType(type);
 					if (_type == 1) {
 						values.push_back(new RUB(std::stof(temp)));

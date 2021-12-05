@@ -1,13 +1,13 @@
 #pragma once
 #include "Currency.h"
-class RUB : virtual public Currency {
+class RUB :  public Currency {
 private:
 	const float ratio = 0.17;
 	const std::vector<std::string> type{ "RUB","rub" };
 public:
 
 	RUB();
-	RUB(float);
+	RUB(float,float ratio = 0.17);
 	void Show()override;
 };
 
