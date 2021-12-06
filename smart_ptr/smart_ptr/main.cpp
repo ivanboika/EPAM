@@ -1,4 +1,4 @@
-#include "D:\git\new_epam\DB_task\DB_task\libs.h"
+#include "/empty/DB_task/DB_task/libs.h"
 #include <list>
 #include "Student.h"
 int main() {
