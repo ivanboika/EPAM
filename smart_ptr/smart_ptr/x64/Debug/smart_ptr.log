@@ -1,2 +1,3 @@
-﻿  Student.cpp
+﻿  main.cpp
+H:\empty\smart_ptr\smart_ptr\main.cpp(12,21): warning C4018: '<': signed/unsigned mismatch
   smart_ptr.vcxproj -> H:\empty\smart_ptr\x64\Debug\smart_ptr.exe

@@ -17,7 +17,7 @@ private:
 public:
 	friend class Functor;
 	friend class Generator;
-	Student(std::string, std::string, int, int)noexcept;
+	Student(std::string a="N/A", std::string b="N/A", int c=0, int d=0)noexcept;
 	explicit Student(const Student&) = default;
 	explicit Student(Student&&) = default;
 	Student& operator=(const Student&) = default;
